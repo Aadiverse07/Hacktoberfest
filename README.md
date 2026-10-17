@@ -1,3 +1,5 @@
+Here's the Live link of the project: [https://finova-open.onrender.com/](https://finova-open.onrender.com/)
+
 # Finova
 
 Finova is a Next.js App Router and TypeScript accounting workspace. This mock-first demo starts without a database, external account, or model key.
