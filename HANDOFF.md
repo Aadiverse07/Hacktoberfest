@@ -59,3 +59,12 @@ Phase 7 — packaging and release. **DONE**, committed as `phase 7: package and 
 
 - User supplied six Gemini credentials; local ignored `.env` now sets `MODEL_PROVIDER=gemma-gemini`, `GEMINI_ENABLED=true`, `GEMINI_API_KEY`, and rotating slots `GEMINI_API_KEY_1` through `_6`. Values are intentionally not recorded here or committed.
 - Added `_5` and `_6` to the env schema and legacy sequential key rotation. Focused provider tests pass (8/8); ESLint on the changed source files passes. No live inference request was sent during this configuration step.
+
+## Phase 8: frontend integration and Render packaging
+
+- **DONE:** Integrated the Tradetide frontend with the Finova backend and pushed the combined repository to `Aadiverse07/Hacktoberfest` (`8b47e6a`). The outgoing history was cleaned after GitHub push protection found key-like strings in an old `.env.example` commit; the current `.env` remains ignored.
+- **DONE:** Added judge overview in [Details.md](Details.md), a mock-only Render Blueprint in `render.yaml`, and a Render-compatible start command that uses `$PORT`.
+- **DONE:** Mock-mode production build passes with `DATA_SOURCE=mock DATA_BACKEND=mock MODEL_PROVIDER=mock GEMINI_ENABLED=false npm run build`. Next build skips TypeScript validation because the repository has documented existing diagnostics; `npm run typecheck` remains a separate failing check.
+- **IN PROGRESS:** Live Render service has not been created. Browser access to `dashboard.render.com` was declined, so work stopped before connecting the GitHub repository or creating an external service.
+- **NEXT:** Open the Render Blueprint flow for `Aadiverse07/Hacktoberfest`, select `main`, and create the free `finova-open` web service. The YAML sets mock data/model and requires no secrets or database credentials.
+- **Decisions:** Render demo stays on `DATA_SOURCE=mock`, `DATA_BACKEND=mock`, `MODEL_PROVIDER=mock`; real Gemini keys are not copied to Render.

@@ -21,6 +21,8 @@ flowchart LR
 
 See [architecture](docs/ARCHITECTURE.md), [model setup and terms](docs/OPEN_WEIGHT_MODELS.md), and the [three-minute demo](docs/DEMO_SCRIPT.md).
 
+For judges, [Details.md](Details.md) explains the project vision, impact, architecture, demo prompts, and limitations. A mock-only Render Blueprint is included in `render.yaml`.
+
 ## Quick start (mock)
 
 ```sh
